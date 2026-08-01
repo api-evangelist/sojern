@@ -1,8 +1,12 @@
 aid: sojern
 name: Sojern
-description: 'Sojern is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Sojern is an AI-powered digital marketing platform built for the hospitality and travel
+  industry. Powered by the Sojern Traveler Ecosystem, it unifies real-time traveler intent data, AI-driven
+  audience predictions, and multichannel media activation across display, social, video, connected TV,
+  SEM, metasearch, email, and native channels to help hotels, destinations, attractions, airlines, and
+  agencies drive direct bookings, improve ROI, and grow guest loyalty. The platform spans audiences,
+  creative services, activation, optimization, measurement, and attribution, plus guest-experience tools.
+  Sojern has no public developer API surface; it is a company profile in the API Evangelist network.'
 url: https://raw.githubusercontent.com/api-evangelist/sojern/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +14,32 @@ x-backed-by:
 - norwest-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://cdn.prod.website-files.com/62f4d9f104e0675aa0d8401e/63a3caf0ed595569eb075b4d_Hotels-11.webp
 tags:
 - Company
-- Unknown
+- Travel
+- Hospitality
+- Marketing
+- Advertising
+- AdTech
+- MarTech
+- Travel Marketing
+- Audiences
+- Data
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +49,28 @@ maintainers:
 common:
 - type: Website
   url: https://sojern.com
+- type: About
+  url: https://www.sojern.com/about-us
+- type: Blog
+  url: https://www.sojern.com/blog
+- type: Pricing
+  url: https://www.sojern.com/pricing
+- type: PrivacyPolicy
+  url: https://www.sojern.com/privacy-policy
+- type: TermsOfService
+  url: https://www.sojern.com/legal
+- type: Support
+  url: https://www.sojern.com/contact
+- type: Login
+  url: https://platform.sojern.com
+- type: GitHubOrganization
+  url: https://github.com/sojern
+- type: LLMsTxt
+  url: llms/sojern-llms.txt
+- type: DomainSecurity
+  url: security/sojern-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 2
+  pass: local-v1
