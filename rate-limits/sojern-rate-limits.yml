@@ -1,0 +1,20 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.sojern.com/legal/partner-documentation
+note: >-
+  Sojern publishes no rate limits. There is no public developer portal, no API reference and no
+  machine-readable contract to attach limits to; the only public technical document is the
+  "Sojern Technology Specifications for Partners" legal page, which covers integration methods
+  (Universal Pixel, server-to-server postback, batch upload to a GCS/S3 bucket, mobile postback)
+  and transport security but states no quotas, windows, burst allowances or response headers.
+  The customer portal GraphQL backend (https://portal.sojern.com/backend/v1/graphql) is
+  auth-gated, so no runtime rate-limit headers could be observed anonymously.
+limit_count: 0
+limits: []
+headers: []
+exhaustion_status: null
+docs: https://www.sojern.com/legal/partner-documentation
+evidence:
+- {url: 'https://www.sojern.com/legal/partner-documentation', status: 200, finding: no rate limits stated}
+- {url: 'https://portal.sojern.com/backend/v1/graphql', status: 200, finding: 'anonymous POST returns only {"errors":[{"message":"introspection is disabled for role: \"anonymous\""}]} — no RateLimit-* headers observable'}
+- {url: 'https://sojernportal.zendesk.com/api/v2/help_center/articles/search.json?query=api', status: 200, finding: 0 help-center articles match "api"}

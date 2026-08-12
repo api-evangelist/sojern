@@ -1,0 +1,56 @@
+generated: '2026-08-12'
+method: probed
+source: live GET of /.well-known/* on every Sojern host reachable from apis.yml and the portal bundle
+note: >-
+  Every /.well-known/ path 404s on every Sojern host. portal.sojern.com answers HTTP 200 with the
+  same 1,982-byte single-page-app shell (text/html) for EVERY path probed, including paths that do
+  not exist — it is an SPA catch-all, not a served discovery document, so every portal row is
+  recorded as a MISS. No WellKnown, SecurityTxt, or AgentCard pointer is emitted from this probe.
+hosts:
+- host: https://www.sojern.com
+  role: website / marketing
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/api-catalog, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/agent.json, status: 404, content_type: text/html, file: null}
+- host: https://api.sojern.com
+  role: API host (Go service; 404s every path probed including /openapi.json and /graphql)
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/api-catalog, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/agent.json, status: 404, content_type: text/plain, file: null}
+- host: https://beacon.sojern.com
+  role: Sojern Universal Pixel beacon (CNAME pixelglobal.sojern.com)
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/api-catalog, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: text/plain, file: null}
+  - {path: /.well-known/agent.json, status: 404, content_type: text/plain, file: null}
+- host: https://portal.sojern.com
+  role: customer portal SPA (app.sojern.com 301s here)
+  spa_catch_all: true
+  documents:
+  - {path: /.well-known/security.txt, status: 200, content_type: text/html, file: null, verdict: miss-spa-shell}
+  - {path: /.well-known/openid-configuration, status: 200, content_type: text/html, file: null, verdict: miss-spa-shell}
+  - {path: /.well-known/oauth-authorization-server, status: 200, content_type: text/html, file: null, verdict: miss-spa-shell}
+  - {path: /.well-known/api-catalog, status: 200, content_type: text/html, file: null, verdict: miss-spa-shell}
+  - {path: /.well-known/ai-plugin.json, status: 200, content_type: text/html, file: null, verdict: miss-spa-shell}
+  - {path: /.well-known/agent-card.json, status: 200, content_type: text/html, file: null, verdict: miss-spa-shell}
+  - {path: /.well-known/agent.json, status: 200, content_type: text/html, file: null, verdict: miss-spa-shell}
+summary:
+  hosts_probed: 4
+  paths_probed: 28
+  documents_found: 0
+  security_txt: false
+  agent_card: false

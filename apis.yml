@@ -6,7 +6,11 @@ description: 'Sojern is an AI-powered digital marketing platform built for the h
   SEM, metasearch, email, and native channels to help hotels, destinations, attractions, airlines, and
   agencies drive direct bookings, improve ROI, and grow guest loyalty. The platform spans audiences,
   creative services, activation, optimization, measurement, and attribution, plus guest-experience tools.
-  Sojern has no public developer API surface; it is a company profile in the API Evangelist network.'
+  Sojern publishes no public developer program: there is no developer portal, no API reference and no
+  machine-readable contract. Its integration surface is the partner-side Sojern Universal Pixel and
+  server-to-server postback described in its Technology Specifications for Partners, while the customer
+  portal is backed by an authenticated GraphQL endpoint whose introspection is disabled for anonymous
+  callers. This is a company profile in the API Evangelist network.'
 url: https://raw.githubusercontent.com/api-evangelist/sojern/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -27,7 +31,7 @@ accessModel:
   method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-08-12'
 image: https://cdn.prod.website-files.com/62f4d9f104e0675aa0d8401e/63a3caf0ed595569eb075b4d_Hotels-11.webp
 tags:
 - Company
@@ -61,16 +65,55 @@ common:
   url: https://www.sojern.com/legal
 - type: Support
   url: https://www.sojern.com/contact
+- type: HelpCenter
+  name: Sojern Portal Knowledge Base
+  url: https://sojernportal.zendesk.com/hc/en-us
+- type: GettingStarted
+  name: Getting Started with the Sojern Portal
+  url: https://sojernportal.zendesk.com/hc/en-us/categories/17486414747028-Getting-Started
+- type: Documentation
+  name: Sojern Technology Specifications for Partners
+  url: https://www.sojern.com/legal/partner-documentation
 - type: Login
-  url: https://platform.sojern.com
+  url: https://portal.sojern.com/login
 - type: GitHubOrganization
   url: https://github.com/sojern
+- type: Compliance
+  name: Sojern Privacy Center (DAA/DAAC/EDAA, EU-U.S. DPF, GDPR, U.S. state privacy)
+  url: https://www.sojern.com/privacy
+- type: Conformance
+  url: conformance/sojern-conformance.yml
+- type: Plans
+  url: plans/sojern-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/sojern-rate-limits.yml
 - type: LLMsTxt
   url: llms/sojern-llms.txt
 - type: DomainSecurity
   url: security/sojern-domain-security.yml
 x-enrichment:
-  date: '2026-07-21'
-  status: enriched
-  artifacts_added: 2
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 4
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Sojern runs no developer program at all — api.sojern.com is live but 404s every spec path,
+    the only public technical document is a legal "Technology Specifications for Partners" page
+    describing a JavaScript pixel and a server-to-server postback, and the sole machine-readable
+    contract is the customer portal's Hasura GraphQL backend, which answers anonymous callers with
+    "introspection is disabled for role: anonymous".
+  evidence:
+  - url: https://api.sojern.com/openapi.json
+    status: 404
+  - url: https://portal.sojern.com/backend/v1/graphql
+    status: 200
+  - url: https://www.sojern.com/.well-known/agent-card.json
+    status: 404
+  - url: https://sojernportal.zendesk.com/api/v2/help_center/articles/search.json?query=api
+    status: 200
+  - url: https://www.sojern.com/legal/partner-documentation
+    status: 200
+  checked: '2026-08-12'

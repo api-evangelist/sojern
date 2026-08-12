@@ -1,0 +1,92 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.sojern.com/pricing
+note: >-
+  Sojern publishes a named tier list with one real published rate (the 15% commission model); every
+  other tier is quote-based ("Get Your Custom Plan" / "Ask About Custom Pricing"). There is no
+  self-serve checkout and no API-metered pricing — these are marketing-services plans, not API plans.
+plan_count: 7
+currency: USD
+billing_notes:
+  - 'Advertising is charged as CPM, a percentage fee of total budget, or the 15% commission model.'
+  - 'Guest Experience solutions are monthly subscriptions priced by property count or room volume.'
+  - 'A one-time setup fee may apply to Guest Marketing Suite onboarding and integrations.'
+  - 'Channel integration pass-through fees (e.g. Availability, Rates and Inventory / ARI fees) may apply.'
+plans:
+- name: Commission
+  family: Travel Ads Platform
+  tagline: Pay Only for Results
+  price: '15% commission'
+  price_model: commission-on-completed-stay
+  currency: USD
+  billing_period: per-booking
+  published_price: true
+  upfront_cost: false
+  best_for: Small to mid-sized hotels
+  quote: '15% commission—only after a guest books and stays.'
+  cta: Start for Free
+- name: Managed Campaign
+  family: Travel Ads Platform
+  tagline: Let Us Maximize Your Marketing Budget
+  price: null
+  price_model: cpm
+  currency: USD
+  billing_period: campaign
+  published_price: false
+  best_for: Hospitality brands and travel marketers
+  quote: 'We run your display, video, social, SEM, and metasearch—all for one straightforward CPM.'
+  cta: Get Your Custom Plan
+- name: Co-Op
+  family: Travel Ads Platform
+  tagline: Marketing With Shared Goals, Resources
+  price: null
+  price_model: pooled-budget
+  currency: USD
+  billing_period: campaign
+  published_price: false
+  best_for: Destinations, hotels, attractions, and tourism groups
+  cta: Explore Co-Op Programs
+- name: Traveler Audiences
+  family: Travel Ads Platform
+  tagline: Flexible, Curated Data for Your Own DSP
+  price: null
+  price_model: audience-package-or-pmp-deal
+  currency: USD
+  billing_period: negotiated
+  published_price: false
+  best_for: Agencies and traders activating travel audiences in their own DSP
+  quote: 'Get custom audience packages and PMP deals tailored to your goals.'
+  cta: Try a Pilot Campaign
+- name: Guest Marketing Suite
+  family: Guest Experience Platform
+  tagline: Automated Emails. More Bookings. Happier Guests.
+  price: null
+  price_model: per-property-or-per-room
+  currency: USD
+  billing_period: subscription
+  published_price: false
+  setup_fee: true
+  best_for: Hotels driving direct bookings and loyalty
+  quote: 'Priced per property or per room; discounts available when bundled with Sojern media campaigns. One-time setup fee applies.'
+  cta: Ask About Custom Pricing
+- name: AI Concierge
+  family: Guest Experience Platform
+  tagline: 24/7 Guest Support. Zero Extra Headcount.
+  price: null
+  price_model: scaled-by-property-count-and-usage
+  currency: USD
+  billing_period: monthly
+  published_price: false
+  best_for: Properties elevating service without added headcount
+  quote: 'Scalable pricing based on property count and usage.'
+  cta: Start Your Subscription
+- name: Reputation Manager
+  family: Guest Experience Platform
+  tagline: Smarter Reviews. Stronger Reputation.
+  price: null
+  price_model: subscription
+  currency: USD
+  billing_period: monthly
+  published_price: false
+  best_for: Hospitality brands managing reviews and reputation
+  cta: Start Your Subscription
