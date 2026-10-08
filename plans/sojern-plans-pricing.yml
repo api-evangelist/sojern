@@ -90,3 +90,53 @@ plans:
   published_price: false
   best_for: Hospitality brands managing reviews and reputation
   cta: Start Your Subscription
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - negotiated
+  units: []
+  plans:
+  - name: Commission
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Managed Campaign
+    access: other
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Co-Op
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Traveler Audiences
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Guest Marketing Suite
+    access: other
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
+  - name: AI Concierge
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Reputation Manager
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
