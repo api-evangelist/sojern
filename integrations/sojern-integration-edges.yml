@@ -4,6 +4,13 @@ checked:
 - https://integrations-api.siteminder.com/public/partners/all?lang=en
 - https://vendor-list.consensu.org/v3/vendor-list.json
 - mews-com/integrations/mews-com-integration-edges.yml
+- https://certify.octo.travel/api/certification/public
+- https://certify.octo.travel/verify
+- https://docs.google.com/spreadsheets/d/1UIgUYAPO3SUsdoGmg5xIGHIBHWHOx7XfQCOzOTML6ms
+- https://docs.octo.travel/
+- https://docs.octo.travel/additional-resources/known-implementations
+- https://octo.travel/api/members
+- https://octo.travel/members
 marketplace_apps: []
 edges:
 - partner_name: IAB Europe TCF Global Vendor List
@@ -66,4 +73,35 @@ edges:
   detected: '2026-10-19'
   categories:
   - booking_engine_plugin
+- partner_name: OCTO member directory (octo.travel)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://octo.travel/members
+  category: OCTO standards body membership (tours, activities & attractions connectivity)
+  contract_reference:
+    register: OCTO member directory (octo.travel)
+    standard: OCTO (Open Connectivity for Tours, Activities & Attractions) API specification
+    spec_file: null
+    spec_url: https://app.swaggerhub.com/apis-docs/OCTO-API/OCTO-API/1.0
+    standard_repo: octo
+    role: industry-member
+    registrations:
+    - registered_name: Sojern
+      register_status: member
+      register_id: NmdXGgAm
+      matched_domain: sojern.com
+      matched_by: domain
+      member_type: industry-member
+      identity: wikidata Q17082162 'Sojern' P856 http://sojern.com
+    detected_by: sweep-octo-tours-activities.py
+    detected: '2026-10-23'
+    signal_note: 'participation only: OCTO standards-body membership; membership certifies nothing'
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-octo-tours-activities.py
+  first_seen: '2026-10-23'
+  partner_tier: Industry Member - Under USD $5M
 source: https://integrations-api.siteminder.com/public/partners/all?lang=en
